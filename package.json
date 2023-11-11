@@ -1,0 +1,20 @@
+{
+    "name": "nextjs-v13",
+    "private": true,
+    "workspaces": [
+      "./host",
+      "./fellowship",
+      "./training"
+    ],
+    "version": "0.0.0",
+    "scripts": {
+      "dev": "concurrently \"npm --prefix host run dev\" \"npm --prefix fellowship run dev\" \"npm --prefix training run dev\"",
+      "start": "concurrently \"npm --prefix host run dev\" \"npm --prefix fellowship run dev\" \"npm --prefix training run dev\"",
+      "build": "concurrently \"npm --prefix host run build\" \"npm --prefix fellowship run build\" \"npm --prefix training run build\"",
+      "serve": "concurrently \"npm --prefix host run start\" \"npm --prefix fellowship run start\" \"npm --prefix training run start\""
+    },
+    "dependencies": {
+        "concurrently": "^8.2.2"
+      }
+  }
+  
